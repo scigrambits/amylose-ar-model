@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scigram - Amylose Molecule 3D AR</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            background-color: #f5f5f5;
+        }
+        
+        .info {
+            padding: 30px;
+            line-height: 1.6;
+        }
+        
+        .instructions {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 8px 0;
+        }
+        
+        .ar-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Scigram</h1>
+            <p class="subtitle">Scigram Technologies Foundation</p>
+            <div style="margin-top: 15px; font-size: 0.9em;">
+                <div>🌐 www.scigram.org</div>
+                <div>📞 7020735831</div>
+            </div>
+        </div>
+        
+        <model-viewer
+            src="amylose.glb"
+            alt="Amylose रेणूचे 3D मॉडेल"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            touch-action="pan-y"
+            auto-rotate
+            shadow-intensity="1"
+            camera-orbit="45deg 75deg 2.5m"
+            field-of-view="30deg">
+            
+            <button slot="ar-button" class="ar-button">
+                📱 AR मध्ये पाहा
+            </button>
+            
+            <div class="progress-bar" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+        </model-viewer>
+        
+        <div class="info">
+            <h2>अमायलोज बद्दल</h2>
+            <p>अमायलोज हे α-D-ग्लुकोज युनिट्सपासून बनलेले पॉलिसॅकराइड आहे, जे α(1→4) ग्लायकोसिडिक बाँड्सद्वारे एकमेकांशी जोडलेले असतात. हा स्टार्चच्या दोन घटकांपैकी एक आहे, जो सुमारे 20-30% रचना बनवतो.</p>
+            
+            <div class="instructions">
+                <h3>AR मध्ये कसे पाहावे:</h3>
+                <ol>
+                    <li>वरील "AR मध्ये पाहा" बटणावर क्लिक करा</li>
+                    <li>तुमचा कॅमेरा सपाट पृष्ठभागाकडे दाखवा</li>
+                    <li>रेणू तुमच्या वास्तविक वातावरणात दिसेल</li>
+                    <li>वेगवेगळ्या कोनातून पाहण्यासाठी फिरा</li>
+                    <li>मॉडेलचा आकार बदलण्यासाठी पिंच करा</li>
+                </ol>
+                <p><strong>टीप:</strong> AR वैशिष्ट्यांसाठी ARCore-सुसंगत Android डिव्हाइस किंवा ARKit-सुसंगत iOS डिव्हाइस आवश्यक आहे.</p>
+            </div>
+            <footer style="font-size: 0.8em; text-align: center; margin: 1em 0; color: #555;">
+  Amylose 3D Model © 2026 Scigram·  
+  Licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+    CC BY-NC-ND 4.0
+  </a>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>
